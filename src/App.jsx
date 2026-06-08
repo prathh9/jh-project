@@ -1,62 +1,71 @@
 import React from 'react';
+import './index.css'
 
-function App() {
+export default function App() {
   return (
-    <div className="w-full font-sans">
-      {/* Nav bar*/ }
-      <nav className="fixed top-0 w-full z-50 bg-blue-600/90 text-white p-4">
-        <ul className="flex space-x-8 font-bold max-w-6xl mx-auto">
-          <li className="cursor-pointer hover:text-blue-200">WELCOME</li>
-          <li className="cursor-pointer hover:text-blue-200">HOME</li>
-          <li className="cursor-pointer hover:text-blue-200">RELEASES</li>
-          <li className="cursor-pointer hover:text-blue-200">PLAYLIST</li>
-          <li className="cursor-pointer hover:text-blue-200">ABOUT</li>
-          <li className="cursor-pointer hover:text-blue-200">LINKS</li>
-        </ul>
-      </nav>
+    <div className="relative min-h-screen bg-neutral-950 text-white overflow-hidden font-sans">
+      
+      {/* vid bg*/}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="w-full h-full object-cover opacity-40 transition-opacity duration-1000"
+        >
+          <source src="/JH.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-neutral-950/40 to-neutral-950"></div>
+        <div className="absolute inset-0 bg-radial-gradient from-transparent to-neutral-950/80"></div>
+      </div>
 
-      {/* 1: Welcome/Home */}
-      <section className="relative min-h-screen bg-blue-900 flex items-center justify-center pt-16 overflow-hidden">
-        
-        {/* Yt background */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <iframe 
-            className="absolute top-1/2 left-1/2 w-[150vw] h-[150vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-60"
-            src="https://www.youtube.com/embed/_opQpDYh33I?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=_opQpDYh33I&start=9&end=45"
-            title="YouTube video background" 
-            frameBorder="0" 
-            allow="autoplay; encrypted-media" 
-            allowFullScreen
-          ></iframe>
+      {/* 2. Minimalist Header / Navigation */}
+      <header className="relative z-10 flex items-center justify-between px-6 py-6 md:px-12 backdrop-blur-xs bg-black/10 border-b border-white/5">
+        <div className="text-xl font-black tracking-widest uppercase">
+          <span style={{ color: '#FAC857' }}>Jihyo</span> <span className="text-neutral-400 font-light">GLOBAL</span>
         </div>
-        
-        {/* Content that goes on top of yt background */}
-        <div className="relative z-10 text-white text-center">
-          <h1 className="text-7xl font-extrabold mb-4 drop-shadow-lg">WELCOME</h1>
-          <p className="text-2xl font-medium drop-shadow-md">JIHYO.</p>
-        </div>
-      </section>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase">
+          <a href="/" className="text-white border-b border-white pb-1">Home</a>
+          <a href="/releases.html" className="text-neutral-400 hover:text-white transition-colors">Releases</a>
+          <a href="#stationhead" className="text-neutral-400 hover:text-white transition-colors">Stationhead</a>
+          <a href="#socials" className="text-neutral-400 hover:text-white transition-colors">Socials</a>
+        </nav>
+      </header>
 
-      {/* 2: Releases section */}
-      <section className="min-h-screen bg-gray-300 flex flex-col items-center justify-center p-8">
-        <h2 className="text-4xl font-bold text-gray-700 mb-8">RELEASES HERE?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-          {/* Mock content boxes for merch/releases */}
-          <div className="h-64 bg-gray-400 rounded-lg shadow-md"></div>
-          <div className="h-64 bg-gray-400 rounded-lg shadow-md"></div>
-          <div className="h-64 bg-gray-400 rounded-lg shadow-md"></div>
-        </div>
-      </section>
 
-      {/* 3: Playlist/Links/About */}
-      <section className="min-h-screen bg-orange-400 flex flex-col items-center justify-center p-8">
-        <h2 className="text-4xl font-bold text-orange-900 mb-8">PLAYLIST/LINK and ABOUT here?</h2>
-        <div className="w-full max-w-4xl bg-orange-300 h-96 rounded-lg shadow-md flex items-center justify-center">
-          <p className="text-orange-800 text-lg">Spotify embed or About text goes here</p>
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-88px)] px-4 text-center">
+        <p className="text-xs md:text-sm tracking-[0.4em] uppercase text-neutral-400 mb-4 animate-pulse">
+          Official Fan Site Coming Soon 
+        </p>
+        <div className="flex justify-center items-center w-full my-6">
+          <div className="animate-typing-welcome max-w-max">
+            <h1 className="text-xl sm:text-3xl md:text-5xl font-black uppercase tracking-wide text-white">
+              Welcome to <span style={{ color: '#FAC857' }}>Jihyo</span> Global Fan website
+            </h1>
+          </div>
         </div>
-      </section>
+        <p className="max-w-md text-sm md:text-base text-neutral-400 tracking-wide leading-relaxed font-light mb-8">
+          <span style={{ color: '#FAC857' }}>Jihyo</span> is the multi-talented award-winning leader and main vocalist of the kpop girl group TWICE. As a soloist Jihyo released her debut mini album ZONE, 4 OSTs and multiple other projects. Jihyo is known as the perfect idol possessing an incredible skillset as a vocalist, dancer, performer, songwriter and variety star who isn't afraid to take on new challenges.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a 
+            href="#releases" 
+            className="px-8 py-3 bg-white text-black font-semibold text-xs tracking-[0.2em] uppercase rounded-xs hover:bg-neutral-200 transition-all duration-300 transform hover:scale-[1.02]"
+          >
+            Explore Releases
+          </a>
+          <a 
+            href="https://www.stationhead.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="px-8 py-3 bg-transparent text-white border border-white/20 font-semibold text-xs tracking-[0.2em] uppercase rounded-xs hover:bg-white/10 hover:border-white transition-all duration-300"
+          >
+            Join Stationhead
+          </a>
+        </div>
+      </main>
+
     </div>
   );
 }
-
-export default App;
