@@ -28,7 +28,7 @@ export default function App() {
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase drop-shadow-md">
           <a href="/" className="text-white border-b border-white pb-1">Home</a>
-          <a href="/releases.html" className="text-neutral-300 hover:text-white transition-colors">Releases</a>
+          <a href="#releases" className="text-neutral-300 hover:text-white transition-colors">Releases</a>
           <a href="#stationhead" className="text-neutral-300 hover:text-white transition-colors">Stationhead</a>
           <a href="#socials" className="text-neutral-300 hover:text-white transition-colors">Socials</a>
         </nav>
