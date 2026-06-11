@@ -80,19 +80,8 @@ export default function App() {
         </main>
 
         {/* rest of the website */}
-        {/* 5. REST OF THE SITE (High-Visibility Tech Grid) */}
-        <div 
-          className="relative z-20 bg-neutral-950 overflow-hidden"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px'
-          }}
-        >
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-neutral-950 to-transparent pointer-events-none z-10"></div>
-          
+        <div className="relative z-20 bg-neutral-950 overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FAC857] opacity-15 blur-[100px] rounded-full pointer-events-none"></div>
           <StationheadSection />
         </div>
       </div>
