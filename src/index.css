@@ -21,4 +21,15 @@
         typing 3s steps(36, end) forwards,
         blink-caret 0.75s step-end infinite;
     }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: translateY(10px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  
+    .animate-pop-in {
+      animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    
   }
