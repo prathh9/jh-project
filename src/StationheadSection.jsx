@@ -28,7 +28,7 @@ export default function StationheadSection() {
   }, []);
 
   return (
-    <section id="stationhead" className="w-full max-w-6xl mx-auto pt-8 pb-24 px-6 relative z-10">
+    <section id="stationhead" className="w-full max-w-6xl mx-auto pt-8 pb-0 px-6 relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
 
         {/* Left Side */}
