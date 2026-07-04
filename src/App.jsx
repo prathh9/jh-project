@@ -59,7 +59,7 @@ export default function App() {
           <div className="flex justify-center items-center w-full my-6">
             <div className="animate-typing-welcome max-w-max">
               <h1 className="text-xl sm:text-3xl md:text-5xl font-black uppercase tracking-wide text-white drop-shadow-xl">
-                Welcome to <span style={{ color: '#FAC857' }}>Jihyo</span> Global Fan website
+                Welcome to <span style={{ color: '#FAC857' }}>Jihyo</span> Global website
               </h1>
             </div>
           </div>

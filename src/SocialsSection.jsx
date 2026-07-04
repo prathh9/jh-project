@@ -1,4 +1,8 @@
 import React from 'react';
+import { FaInstagram, FaSpotify, FaYoutube } from 'react-icons/fa';
+import { SlSocialSpotify } from 'react-icons/sl';
+import { SiApplemusic } from 'react-icons/si';
+import { HiOutlineUsers } from 'react-icons/hi';
 
 const SOCIAL_LINKS = [
   { 
@@ -8,7 +12,8 @@ const SOCIAL_LINKS = [
     clipPath: 'polygon(2% 8%, 98% 0%, 95% 95%, 0% 100%)', 
     rotation: '-rotate-2',
     delay: '0s',
-    duration: '6s'
+    duration: '6s',
+    icon: <FaInstagram className="w-6 h-6 md:w-8 md:h-8 mb-1" />
   },
   { 
     id: 'spotify', 
@@ -17,7 +22,8 @@ const SOCIAL_LINKS = [
     clipPath: 'polygon(0% 0%, 100% 5%, 98% 100%, 5% 95%)', 
     rotation: 'rotate-1',
     delay: '1.2s',
-    duration: '7s'
+    duration: '7s',
+    icon: <SlSocialSpotify className='w-6 h-6 md:w-8 md:h-8 mb-1' />
   },
   { 
     id: 'apple', 
@@ -26,7 +32,8 @@ const SOCIAL_LINKS = [
     clipPath: 'polygon(5% 0%, 95% 5%, 100% 100%, 0% 92%)', 
     rotation: 'rotate-3',
     delay: '2.5s',
-    duration: '5.5s'
+    duration: '5.5s',
+    icon: <SiApplemusic className='w-6 h-6 ml-6 md:w-8 md:h-8 mb-1' />
   },
   { 
     id: 'youtube', 
@@ -35,7 +42,9 @@ const SOCIAL_LINKS = [
     clipPath: 'polygon(0% 5%, 100% 0%, 95% 95%, 2% 100%)', 
     rotation: '-rotate-1',
     delay: '0.8s',
-    duration: '6.5s'
+    duration: '6.5s', 
+    icon: <FaYoutube className='w-6 h-6 md:w-8 md:h-8 mb-1' />
+
   },
 ];
 
@@ -82,6 +91,9 @@ export default function SocialsSection() {
                 className="absolute inset-0 bg-[#1A1A1A] group-hover:bg-[#FAC857] transition-all duration-300 flex items-center justify-center shadow-2xl border border-white/5"
                 style={{ clipPath: social.clipPath }}
               >
+                <div className="text-[#FAC857] group-hover:text-black transition-colors duration-300 drop-shadow-sm">
+                {social.icon}
+                </div>
                 <span className="text-[#FAC857] group-hover:text-black font-black uppercase tracking-widest text-sm md:text-xl transition-colors duration-300 text-center px-4 leading-tight drop-shadow-sm">
                   {social.name}
                 </span>
