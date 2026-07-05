@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import StationheadSection from './StationheadSection';
 import ReleasesSection from './ReleasesSection';
 import SocialsSection from './SocialsSection';
+import YtSection from './YtSection';
 
 export default function App() {
   const handleSmoothScroll = (e, targetId) => {
@@ -57,7 +58,7 @@ export default function App() {
           </p>
           
           <div className="flex justify-center items-center w-full my-6">
-            <div className="animate-typing-welcome max-w-max">
+            <div>
               <h1 className="text-xl sm:text-3xl md:text-5xl font-black uppercase tracking-wide text-white drop-shadow-xl">
                 Welcome to <span style={{ color: '#FAC857' }}>Jihyo</span> Global website
               </h1>
@@ -92,6 +93,7 @@ export default function App() {
           
           <StationheadSection />
           <ReleasesSection />
+          <YtSection/>
           <SocialsSection />
           
         </div>
